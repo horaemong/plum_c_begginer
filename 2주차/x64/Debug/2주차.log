@@ -1,0 +1,18 @@
+﻿  과제2.c
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(17,8): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(24,25): warning C4047: '함수': 'rsize_t'의 간접 참조 수준이 'char [5]'과(와) 다릅니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(24,17): warning C4024: 'strcpy_s': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(24,28): warning C4047: '함수': 'const char *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(24,26): warning C4024: 'strcpy_s': 형식 및 실제 매개 변수 3의 형식이 서로 다릅니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(27,25): warning C4047: '함수': 'rsize_t'의 간접 참조 수준이 'char [5]'과(와) 다릅니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(27,17): warning C4024: 'strcpy_s': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(27,28): warning C4047: '함수': 'const char *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(27,26): warning C4024: 'strcpy_s': 형식 및 실제 매개 변수 3의 형식이 서로 다릅니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(30,22): warning C4047: '함수': 'rsize_t'의 간접 참조 수준이 'char [3]'과(와) 다릅니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(30,17): warning C4024: 'strcpy_s': 형식 및 실제 매개 변수 2의 형식이 서로 다릅니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(30,25): warning C4047: '함수': 'const char *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(30,23): warning C4024: 'strcpy_s': 형식 및 실제 매개 변수 3의 형식이 서로 다릅니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(268,2): warning C4098: 'main': 'void' 함수에서 값을 반환하고 있습니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(10,6): warning C4101: 'input_rsp' :참조되지 않은 지역 변수입니다.
+C:\Users\hj\workspace\PLUM_C\2주차\과제2.c(11,7): warning C4101: 'str_input_rsp' :참조되지 않은 지역 변수입니다.
+  2주차.vcxproj -> C:\Users\hj\workspace\PLUM_C\2주차\x64\Debug\2주차.exe
