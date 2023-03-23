@@ -2,13 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#define _CRT_SECURE_NO_WARNINGS
 
 void main()
 {
 	int random = 0;
 	char rsp[10]; // 가위, 바위, 보의 약자
-	int input_rsp; // 사용자가 입력한 가위, 바위, 보
-	char str_input_rsp[10]; // 사용자가 입력한 가위, 바위, 보의 문자열
+	//int input_rsp; // 사용자가 입력한 가위, 바위, 보
+	//char str_input_rsp[10]; // 사용자가 입력한 가위, 바위, 보의 문자열
 	int com_win = 0; // 컴퓨터 승리 여부
 	int user_win = 0; // 사용자 승리 여부
 
@@ -21,13 +22,13 @@ void main()
 	switch (random)
 	{
 	case 0:
-		strcpy_s(rsp, "가위",10);
+		strcpy(rsp, "가위");
 		break;
 	case 1:
-		strcpy_s(rsp, "바위",10);
+		strcpy(rsp, "바위");
 		break;
 	case 2:
-		strcpy_s(rsp, "보",10);
+		strcpy(rsp, "보");
 		break;
 	default:
 		break;
@@ -265,5 +266,4 @@ void main()
 		printf("\"크큭 기계주제에 나와 비등하다니\"");
 	}
 
-	return 0;
 }
