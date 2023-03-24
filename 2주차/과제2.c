@@ -7,263 +7,263 @@
 void main()
 {
 	int random = 0;
-	char rsp[10]; // °¡À§, ¹ÙÀ§, º¸ÀÇ ¾àÀÚ
-	// int input_rsp; // »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °¡À§, ¹ÙÀ§, º¸
-	// char str_input_rsp[10]; // »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ °¡À§, ¹ÙÀ§, º¸ÀÇ ¹®ÀÚ¿­
-	int com_win = 0;	// ÄÄÇ»ÅÍ ½Â¸® ¿©ºÎ
-	int user_win = 0; // »ç¿ëÀÚ ½Â¸® ¿©ºÎ
+	char rsp[10];						// ê°€ìœ„, ë°”ìœ„, ë³´ì˜ ì•½ì
+	int input_rsp;					// ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°€ìœ„, ë°”ìœ„, ë³´
+	char str_input_rsp[10]; // ì‚¬ìš©ìê°€ ì…ë ¥í•œ ê°€ìœ„, ë°”ìœ„, ë³´ì˜ ë¬¸ìì—´
+	int com_win = 0;				// ì»´í“¨í„° ìŠ¹ë¦¬ ì—¬ë¶€
+	int user_win = 0;				// ì‚¬ìš©ì ìŠ¹ë¦¬ ì—¬ë¶€
 
-	// Ã¹ ¹øÂ° ÆÇ
-	// ·£´ı ¼ıÀÚ »ı¼º
+	// ì²« ë²ˆì§¸ íŒ
+	// ëœë¤ ìˆ«ì ìƒì„±
 	srand(time(NULL));
 	random = rand() % 3;
 	printf("%d\n", random);
 
-	// ·£´ı ¼ıÀÚ¸¦ °¡À§, ¹ÙÀ§, º¸·Î º¯È¯
+	// ëœë¤ ìˆ«ìë¥¼ ê°€ìœ„, ë°”ìœ„, ë³´ë¡œ ë³€í™˜
 	switch (random)
 	{
 	case 0:
-		strcpy(rsp, "°¡À§");
+		strcpy_s(rsp, 10, "ê°€ìœ„");
 		break;
 	case 1:
-		strcpy(rsp, "¹ÙÀ§");
+		strcpy(rsp, 10, "ë°”ìœ„");
 		break;
 	case 2:
-		strcpy(rsp, "º¸");
+		strcpy(rsp, 10, "ë³´");
 		break;
 	default:
 		break;
 	}
-	printf("%s", rsp);
-	//// »ç¿ëÀÚ°¡ °¡À§, ¹ÙÀ§, º¸ Áß ÇÏ³ª¸¦ ÀÔ·Â¹ŞÀ½(0 : °¡À§, 1 : ¹ÙÀ§, 2 : º¸)
-	// printf("°¡À§, ¹ÙÀ§, º¸ Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	printf("%s\n", rsp);
+	//// ì‚¬ìš©ìê°€ ê°€ìœ„, ë°”ìœ„, ë³´ ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥ë°›ìŒ(0 : ê°€ìœ„, 1 : ë°”ìœ„, 2 : ë³´)
+	// printf("ê°€ìœ„, ë°”ìœ„, ë³´ ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 	// scanf_s("%d", &input_rsp);
 
-	//// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¼ıÀÚ¸¦ °¡À§, ¹ÙÀ§, º¸·Î º¯È¯
+	//// ì‚¬ìš©ìê°€ ì…ë ¥í•œ ìˆ«ìë¥¼ ê°€ìœ„, ë°”ìœ„, ë³´ë¡œ ë³€í™˜
 	// switch (input_rsp)
 	//{
 	// case 0:
-	//	strcpy_s(str_input_rsp, "°¡À§",10);
+	//	strcpy_s(str_input_rsp, "ê°€ìœ„",10);
 	//	break;
 	// case 1:
-	//	strcpy_s(str_input_rsp, "¹ÙÀ§",10);
+	//	strcpy_s(str_input_rsp, "ë°”ìœ„",10);
 	//	break;
 	// case 2:
-	//	strcpy_s(str_input_rsp, "º¸",10);
+	//	strcpy_s(str_input_rsp, "ë³´",10);
 	//	break;
 	// default:
-	//	printf("³Í ³ªÀÇ ¼ö¸¦ Æò»ı ÀÌÇØ ¸øÇØ...");
+	//	printf("ë„Œ ë‚˜ì˜ ìˆ˜ë¥¼ í‰ìƒ ì´í•´ ëª»í•´...");
 	//	break;
 	// }
 
-	//// ½ÂºÎ¸¦ °¡¸¥´Ù.
-	// printf("ÄÄÇ»ÅÍ : %s", rsp);
-	// printf("³ª : %s", str_input_rsp);
+	//// ìŠ¹ë¶€ë¥¼ ê°€ë¥¸ë‹¤.
+	// printf("ì»´í“¨í„° : %s", rsp);
+	// printf("ë‚˜ : %s", str_input_rsp);
 	// if (random == input_rsp)
 	//{
-	//	printf("Å©Åª ºñ°å±º");
+	//	printf("í¬í­ ë¹„ê²¼êµ°");
 	// }
 	// else if (random == 0 && input_rsp == 1)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ ÀÌ°å±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì´ê²¼êµ°");
 	//	user_win += 1;
 	// }
 	// else if (random == 0 && input_rsp == 2)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ Á³±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì¡Œêµ°");
 	//	com_win += 1;
 	// }
 	// else if (random == 1 && input_rsp == 0)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ Á³±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì¡Œêµ°");
 	//	com_win += 1;
 	// }
 	// else if (random == 1 && input_rsp == 2)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ ÀÌ°å±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì´ê²¼êµ°");
 	//	user_win += 1;
 	// }
 	// else if (random == 2 && input_rsp == 0)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ ÀÌ°å±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì´ê²¼êµ°");
 	//	user_win += 1;
 	// }
 	// else if (random == 2 && input_rsp == 1)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ Á³±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì¡Œêµ°");
 	//	com_win += 1;
 	// }
 
-	////µÎ ¹øÂ° ÆÇ
+	////ë‘ ë²ˆì§¸ íŒ
 	// srand(time(NULL));
 	// random = rand() % 3;
 
-	//// ·£´ı ¼ıÀÚ¸¦ °¡À§, ¹ÙÀ§, º¸·Î º¯È¯
+	//// ëœë¤ ìˆ«ìë¥¼ ê°€ìœ„, ë°”ìœ„, ë³´ë¡œ ë³€í™˜
 	// switch (random)
 	//{
 	// case 0:
-	//	strcpy_s(rsp, "°¡À§");
+	//	strcpy_s(rsp, "ê°€ìœ„");
 	//	break;
 	// case 1:
-	//	strcpy_s(rsp, "¹ÙÀ§");
+	//	strcpy_s(rsp, "ë°”ìœ„");
 	//	break;
 	// case 2:
-	//	strcpy_s(rsp, "º¸");
+	//	strcpy_s(rsp, "ë³´");
 	//	break;
 	// default:
 	//	break;
 	// }
 
-	//// »ç¿ëÀÚ°¡ °¡À§, ¹ÙÀ§, º¸ Áß ÇÏ³ª¸¦ ÀÔ·Â¹ŞÀ½(0 : °¡À§, 1 : ¹ÙÀ§, 2 : º¸)
-	// printf("°¡À§, ¹ÙÀ§, º¸ Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	//// ì‚¬ìš©ìê°€ ê°€ìœ„, ë°”ìœ„, ë³´ ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥ë°›ìŒ(0 : ê°€ìœ„, 1 : ë°”ìœ„, 2 : ë³´)
+	// printf("ê°€ìœ„, ë°”ìœ„, ë³´ ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 	// scanf_s("%d", &input_rsp);
 
-	//// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¼ıÀÚ¸¦ °¡À§, ¹ÙÀ§, º¸·Î º¯È¯
+	//// ì‚¬ìš©ìê°€ ì…ë ¥í•œ ìˆ«ìë¥¼ ê°€ìœ„, ë°”ìœ„, ë³´ë¡œ ë³€í™˜
 	// switch (input_rsp)
 	//{
 	// case 0:
-	//	strcpy_s(str_input_rsp, "°¡À§");
+	//	strcpy_s(str_input_rsp, "ê°€ìœ„");
 	//	break;
 	// case 1:
-	//	strcpy_s(str_input_rsp, "¹ÙÀ§");
+	//	strcpy_s(str_input_rsp, "ë°”ìœ„");
 	//	break;
 	// case 2:
-	//	strcpy_s(str_input_rsp, "º¸");
+	//	strcpy_s(str_input_rsp, "ë³´");
 	//	break;
 	// default:
-	//	printf("³Í ³ªÀÇ ¼ö¸¦ Æò»ı ÀÌÇØ ¸øÇØ...");
+	//	printf("ë„Œ ë‚˜ì˜ ìˆ˜ë¥¼ í‰ìƒ ì´í•´ ëª»í•´...");
 	//	break;
 	// }
 
-	//// ½ÂºÎ¸¦ °¡¸¥´Ù.
-	// printf("ÄÄÇ»ÅÍ : %s", rsp);
-	// printf("³ª : %s", str_input_rsp);
+	//// ìŠ¹ë¶€ë¥¼ ê°€ë¥¸ë‹¤.
+	// printf("ì»´í“¨í„° : %s", rsp);
+	// printf("ë‚˜ : %s", str_input_rsp);
 	// if (random == input_rsp)
 	//{
-	//	printf("Å©Åª ºñ°å±º");
+	//	printf("í¬í­ ë¹„ê²¼êµ°");
 	// }
 	// else if (random == 0 && input_rsp == 1)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ ÀÌ°å±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì´ê²¼êµ°");
 	//	user_win += 1;
 	// }
 	// else if (random == 0 && input_rsp == 2)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ Á³±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì¡Œêµ°");
 	//	com_win += 1;
 	// }
 	// else if (random == 1 && input_rsp == 0)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ Á³±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì¡Œêµ°");
 	//	com_win += 1;
 	// }
 	// else if (random == 1 && input_rsp == 2)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ ÀÌ°å±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì´ê²¼êµ°");
 	//	user_win += 1;
 	// }
 	// else if (random == 2 && input_rsp == 0)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ ÀÌ°å±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì´ê²¼êµ°");
 	//	user_win += 1;
 	// }
 	// else if (random == 2 && input_rsp == 1)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ Á³±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì¡Œêµ°");
 	//	com_win += 1;
 	// }
 
-	//// ¼¼ ¹øÂ° ÆÇ
+	//// ì„¸ ë²ˆì§¸ íŒ
 	// srand(time(NULL));
 	// random = rand() % 3;
 
-	//// ·£´ı ¼ıÀÚ¸¦ °¡À§, ¹ÙÀ§, º¸·Î º¯È¯
+	//// ëœë¤ ìˆ«ìë¥¼ ê°€ìœ„, ë°”ìœ„, ë³´ë¡œ ë³€í™˜
 	// switch (random)
 	//{
 	// case 0:
-	//	strcpy_s(rsp, "°¡À§");
+	//	strcpy_s(rsp, "ê°€ìœ„");
 	//	break;
 	// case 1:
-	//	strcpy_s(rsp, "¹ÙÀ§");
+	//	strcpy_s(rsp, "ë°”ìœ„");
 	//	break;
 	// case 2:
-	//	strcpy_s(rsp, "º¸");
+	//	strcpy_s(rsp, "ë³´");
 	//	break;
 	// default:
 	//	break;
 	// }
 
-	//// »ç¿ëÀÚ°¡ °¡À§, ¹ÙÀ§, º¸ Áß ÇÏ³ª¸¦ ÀÔ·Â¹ŞÀ½(0 : °¡À§, 1 : ¹ÙÀ§, 2 : º¸)
-	// printf("°¡À§, ¹ÙÀ§, º¸ Áß ÇÏ³ª¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+	//// ì‚¬ìš©ìê°€ ê°€ìœ„, ë°”ìœ„, ë³´ ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥ë°›ìŒ(0 : ê°€ìœ„, 1 : ë°”ìœ„, 2 : ë³´)
+	// printf("ê°€ìœ„, ë°”ìœ„, ë³´ ì¤‘ í•˜ë‚˜ë¥¼ ì…ë ¥í•˜ì„¸ìš” : ");
 	// scanf_s("%d", &input_rsp);
 
-	//// »ç¿ëÀÚ°¡ ÀÔ·ÂÇÑ ¼ıÀÚ¸¦ °¡À§, ¹ÙÀ§, º¸·Î º¯È¯
+	//// ì‚¬ìš©ìê°€ ì…ë ¥í•œ ìˆ«ìë¥¼ ê°€ìœ„, ë°”ìœ„, ë³´ë¡œ ë³€í™˜
 	// switch (input_rsp)
 	//{
 	// case 0:
-	//	strcpy_s(str_input_rsp, "°¡À§");
+	//	strcpy_s(str_input_rsp, "ê°€ìœ„");
 	//	break;
 	// case 1:
-	//	strcpy_s(str_input_rsp, "¹ÙÀ§");
+	//	strcpy_s(str_input_rsp, "ë°”ìœ„");
 	//	break;
 	// case 2:
-	//	strcpy_s(str_input_rsp, "º¸");
+	//	strcpy_s(str_input_rsp, "ë³´");
 	//	break;
 	// default:
-	//	printf("³Í ³ªÀÇ ¼ö¸¦ Æò»ı ÀÌÇØ ¸øÇØ...");
+	//	printf("ë„Œ ë‚˜ì˜ ìˆ˜ë¥¼ í‰ìƒ ì´í•´ ëª»í•´...");
 	//	return 0;
 	//	break;
 	// }
 
-	//// ½ÂºÎ¸¦ °¡¸¥´Ù.
-	// printf("ÄÄÇ»ÅÍ : %s", rsp);
-	// printf("³ª : %s", str_input_rsp);
+	//// ìŠ¹ë¶€ë¥¼ ê°€ë¥¸ë‹¤.
+	// printf("ì»´í“¨í„° : %s", rsp);
+	// printf("ë‚˜ : %s", str_input_rsp);
 	// if (random == input_rsp)
 	//{
-	//	printf("Å©Åª ºñ°å±º");
+	//	printf("í¬í­ ë¹„ê²¼êµ°");
 	// }
 	// else if (random == 0 && input_rsp == 1)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ ÀÌ°å±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì´ê²¼êµ°");
 	//	user_win += 1;
 	// }
 	// else if (random == 0 && input_rsp == 2)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ Á³±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì¡Œêµ°");
 	//	com_win += 1;
 	// }
 	// else if (random == 1 && input_rsp == 0)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ Á³±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì¡Œêµ°");
 	//	com_win += 1;
 	// }
 	// else if (random == 1 && input_rsp == 2)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ ÀÌ°å±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì´ê²¼êµ°");
 	//	user_win += 1;
 	// }
 	// else if (random == 2 && input_rsp == 0)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ ÀÌ°å±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì´ê²¼êµ°");
 	//	user_win += 1;
 	// }
 	// else if (random == 2 && input_rsp == 1)
 	//{
-	//	printf("Å©Åª ³ª´ÔÀÌ Á³±º");
+	//	printf("í¬í­ ë‚˜ë‹˜ì´ ì¡Œêµ°");
 	//	com_win += 1;
 	// }
 
-	// ÃÖÁ¾ ½ÂÆĞ ÆÇÁ¤
+	// ìµœì¢… ìŠ¹íŒ¨ íŒì •
 	if (com_win > user_win)
 	{
-		printf("\"Å©À¹ ±â°èµûÀ§°¡ ³¯ ÀÌ±â´Ù´Ï\"");
+		printf("\"í¬ìœ½ ê¸°ê³„ë”°ìœ„ê°€ ë‚  ì´ê¸°ë‹¤ë‹ˆ\"");
 	}
 	else if (com_win < user_win)
 	{
-		printf("\"Å©Åª ±â°èµûÀ§´Â ³¯ ÀÌ±âÁö ¸øÇØ\"");
+		printf("\"í¬í­ ê¸°ê³„ë”°ìœ„ëŠ” ë‚  ì´ê¸°ì§€ ëª»í•´\"");
 	}
 	else
 	{
-		printf("\"Å©Åª ±â°èÁÖÁ¦¿¡ ³ª¿Í ºñµîÇÏ´Ù´Ï\"");
+		printf("\"í¬í­ ê¸°ê³„ì£¼ì œì— ë‚˜ì™€ ë¹„ë“±í•˜ë‹¤ë‹ˆ\"");
 	}
 }
