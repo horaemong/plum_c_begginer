@@ -23,13 +23,13 @@ void main()
 	switch (random)
 	{
 	case 0:
-		strcpy(rsp, "가위");
+		strcpy_s(rsp, 10, "가위");
 		break;
 	case 1:
-		strcpy(rsp, "바위");
+		strcpy_s(rsp, 10, "바위");
 		break;
 	case 2:
-		strcpy(rsp, "보");
+		strcpy_s(rsp,10 ,"보");
 		break;
 	default:
 		break;
