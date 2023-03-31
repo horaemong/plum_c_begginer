@@ -1,0 +1,11 @@
+﻿'3주차.exe'(Win32): 'C:\Users\hj\workspace\plum_c_begginer\3주차\x64\Debug\3주차.exe'을(를) 로드했습니다. 기호가 로드되었습니다.
+'3주차.exe'(Win32): 'C:\Windows\System32\ntdll.dll'을(를) 로드했습니다. 기호가 로드되었습니다.
+'3주차.exe'(Win32): 'C:\Windows\System32\kernel32.dll'을(를) 로드했습니다. 
+'3주차.exe'(Win32): 'C:\Windows\System32\KernelBase.dll'을(를) 로드했습니다. 기호가 로드되었습니다.
+'3주차.exe'(Win32): 'C:\Windows\System32\vcruntime140d.dll'을(를) 로드했습니다. 
+'3주차.exe'(Win32): 'C:\Windows\System32\ucrtbased.dll'을(를) 로드했습니다. 기호가 로드되었습니다.
+0x59a8 스레드가 종료되었습니다(코드: 0 (0x0)).
+0x3c4 스레드가 종료되었습니다(코드: 3221225786 (0xc000013a)).
+0x5ef8 스레드가 종료되었습니다(코드: 3221225786 (0xc000013a)).
+0x2cd4 스레드가 종료되었습니다(코드: 3221225786 (0xc000013a)).
+'[14040] 3주차.exe' 프로그램이 종료되었습니다(코드: 3221225786 (0xc000013a)).
