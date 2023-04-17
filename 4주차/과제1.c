@@ -9,7 +9,8 @@ int all_lotto_numbers[45]; // 1~45
 int main()
 {
   int count = 0;
-  while (1)
+  int total_money = 10000000;
+  while (total_money > 0)
   {
     max_num = 45;
     // lotto numbers 6개 뽑기
@@ -17,7 +18,9 @@ int main()
     int correct_lotto_numbers[6];
     int size_random = 45;
     int right = 0;
-    
+    int bonus_right = 0;
+    int bonus;
+
     srand(time(NULL));
 
     // lotto numbers 45개 생성
@@ -38,7 +41,7 @@ int main()
     // lotto numbers 45개 생성
     for (int i = 0; i < 45; i++)
     {
-        all_lotto_numbers[i] = i + 1;
+      all_lotto_numbers[i] = i + 1;
     }
     //
     for (int i = 0; i < 6; i++)
@@ -47,6 +50,8 @@ int main()
       correct_lotto_numbers[i] = all_lotto_numbers[random];
       delete_at(random);
     }
+
+    bonus = all_lotto_numbers[rand() % max_num];
 
     // lotto 맞는 숫자 확인
     for (int i = 0; i < 6; i++)
@@ -57,18 +62,47 @@ int main()
         {
           right++;
         }
+        if (lotto_numbers[i] == bonus)
+        {
+          bonus_right++;
+        }
       }
     }
 
     count++;
+    total_money -= 1000;
     if (right == 6)
     {
-      printf("%d번째 1등이 나왔습니다.\n", count);
+      total_money += 1000000000;
+      printf("%d번째 1등이 나왔습니다. 내 전재산 : %d\n", count, total_money);
+      break;
+    }
+    else if (right == 5)
+    {
+      total_money += 1500000;
+      printf("%d번째 3등이 나왔습니다. 내 전재산 : %d\n", count, total_money);
+    }
+    else if (right == 5 && bonus_right == 1)
+    {
+      total_money += 70000000;
+      printf("%d번째 2등이 나왔습니다. 내 전재산 : %d\n", count, total_money);
+    }
+    else if (right == 4)
+    {
+      total_money += 50000;
+      printf("%d번째 4등이 나왔습니다. 내 전재산 : %d\n", count, total_money);
+    }
+    else if (right == 3)
+    {
+      total_money += 5000;
+      printf("%d번째 5등이 나왔습니다. 내 전재산 : %d\n", count, total_money);
     }
     else
     {
-        printf("1등이 아닙니다.");
+      printf("%d번째 %d개 맞췄습니다. 내 전재산 : %d\n", count, right, total_money);
     }
+    // srand를 제대로 이용하기 위해 1초 쉬어줌
+    Sleep(1000);
   }
 }
 
