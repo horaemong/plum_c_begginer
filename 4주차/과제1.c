@@ -99,7 +99,7 @@ int main()
     }
     else
     {
-      printf("%d번째 %d개 맞췄습니다. 내 전재산 : %d\n", count, right, total_money);
+      printf("%d번째 %d개 맞췄습니다a. 내 전재산 : %d\n", count, right, total_money);
     }
     // srand를 제대로 이용하기 위해 1초 쉬어줌
     Sleep(1000);
